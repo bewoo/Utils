@@ -1,18 +1,3 @@
-/**  
- * @Project		: GSPowerWeb
- * @Class Name 	: kr.co.gspower.util.ExcelDownload.java
- * @Autor		: 우병은
- * @Description : ExcelDownload Template
- * @Modification Information  
- * @
- * @  수정일          수정자              수정내용
- * @ -------------   ---------   -------------------------------
- * @ 2014. 11. 4.     우병은               최초생성
- * 
- * 
- */
-
-
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URLEncoder;

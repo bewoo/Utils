@@ -1,18 +1,3 @@
-/**  
- * @Project		: GSPowerWeb
- * @Class Name 	: kr.co.gspower.util.ColumnNonMatchingException.java
- * @Autor		: OOO
- * @Description : 
- * @Modification Information  
- * @
- * @  수정일          수정자              수정내용
- * @ -------------   ---------   -------------------------------
- * @ 2014. 11. 4.     OOO                최초생성
- * 
- * 
- */
-
-
 public class ColumnNonMatchingException extends RuntimeException {
 
     public ColumnNonMatchingException() {

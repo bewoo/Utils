@@ -1,21 +1,6 @@
-
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/**  
- * @Project		: GSPowerWeb
- * @Class Name 	: kr.co.gspower.util.invoke.java
- * @Autor		: OOO
- * @Description : 
- * @Modification Information  
- * @
- * @  수정일          수정자              수정내용
- * @ -------------   ---------   -------------------------------
- * @ 2014. 11. 5.     OOO                최초생성
- * 
- * 
- */
 public class invoke {
     
     /**
