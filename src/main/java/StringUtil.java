@@ -1,6 +1,6 @@
 import org.apache.commons.lang.text.StrBuilder;
 
-public class EgovStringUtil {
+public class StringUtil {
     /**
      * Character 객체에서 첫번째 char만 대문자로 바꾸고 두번째 char부터는 append를 해주어 String을 생성한다.
      * 

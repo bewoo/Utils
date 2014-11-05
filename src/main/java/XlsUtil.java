@@ -224,7 +224,7 @@ public class XlsUtil {
                     style = cAlign;
                     break;
                 }
-                createCell(row, style, j, invoke.invokeByMethodName(list.get(i), "get"+EgovStringUtil.capitalize(properties[j]), null));
+                createCell(row, style, j, invoke.invokeByMethodName(list.get(i), "get"+StringUtil.capitalize(properties[j]), null));
             }
         }
     }
