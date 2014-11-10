@@ -1,3 +1,4 @@
+package kr.co.bewoo.xlsUtil;
 public class ColumnNonMatchingException extends RuntimeException {
 
     public ColumnNonMatchingException() {
