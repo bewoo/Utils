@@ -11,7 +11,7 @@ public class invoke {
      * @param objList
      * @return
      */
-    public static Object invokeByMethodName(Object obj, String methodName, Object[] objList) {
+    public static Object invokeByMethodName(Object obj, String methodName, Object... objList) {
         Method[] methods = obj.getClass().getMethods();
 
         for (int i = 0; i < methods.length; i++) {

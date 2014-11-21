@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -190,6 +191,7 @@ public class XlsUtil {
     
     /**
      * 질의 결과를 전달받아 데이터 작성
+     * Map과 Property를 가지고 있는 Java Bean형태의 객체만 처리가능
      * @param workBook
      * @param list
      */
@@ -197,6 +199,7 @@ public class XlsUtil {
         HSSFSheet sheet = workBook.getSheet(this.sheetName);
         HSSFRow row = null;
         HSSFCellStyle style = null;
+        Object obj = null;
         for(int i =0; i<list.size(); i++) {
             row = sheet.createRow(i+1);
             for(int j =0; j < properties.length; j++) {
@@ -214,7 +217,13 @@ public class XlsUtil {
                     style = cAlign;
                     break;
                 }
-                createCell(row, style, j, invoke.invokeByMethodName(list.get(i), "get"+StringUtil.capitalize(properties[j]), null));
+                if(list.get(i) instanceof Map) {
+                    obj = invoke.invokeByMethodName(list.get(i), "get", properties[j]);
+                } else {
+                    obj = invoke.invokeByMethodName(list.get(i), "get"+StringUtil.capitalize(properties[j]));
+                }
+                
+                createCell(row, style, j, (obj == null ? "" : obj));
             }
         }
     }
